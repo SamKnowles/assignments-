@@ -1,0 +1,14 @@
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: maroon;
+}
+
+.child {
+    position: relative;
+    top: 50%
+}
+.parent {
+    height: 150%
+    
+}

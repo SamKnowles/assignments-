@@ -1,0 +1,11 @@
+body {
+    height: 750;
+}
+
+div {
+    margin: 250px auto;
+    background-color: pink;
+    width: 400px;
+    height: 400px;
+}
+

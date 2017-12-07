@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#nav {
+    z-index: 1;
+    width: 100vw;
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    background-color: red;
+}
+
+ol {
+    text-align: center;
+}
+
+#container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+}
+
+li {
+    font-size: 50px;
+    color: black;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div {
+    top: 100px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+img {
+    margin-right: 15px;
+    float: left;
+    width: 150px;
+    height: auto;
+}
