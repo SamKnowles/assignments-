@@ -1,0 +1,1 @@
+A function that tests whether or not the parameter is a palidrome.  

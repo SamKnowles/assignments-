@@ -1,0 +1,58 @@
+
+@font-face {
+    font-family: marioWords;
+    src: url('font/SuperMario256.woff');
+}
+
+.container-fluid {
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: marioWords;
+    color: crimson;
+    font-size: 60px;
+    height: 14vh;
+}
+
+#L {
+    margin-left: 50px;
+}
+
+#second {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 44vh;
+}
+
+#third {
+    font-family: marioWords; 
+    font-size: 50px;
+    color: crimson;   
+    height: 10vh;
+}
+
+#thirdish {
+    font-family: marioWords; 
+    color: crimson;  
+    font-size: 20px; 
+    height: 20vh;
+}
+
+#fourth {
+    display: flex;
+    justify-content: flex-end;
+    height: 12vh;
+}
+
+#shroom {
+    height: 80%;
+    margin-top: 10px;
+}

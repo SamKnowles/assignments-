@@ -1,0 +1,184 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  .navbar-nav {
+    font-size: 30px;
+    text-align: end;
+  }
+
+  #myNavbar {
+    border-bottom: 2px groove darkorchid; 
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+
+  .winkE {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    color: black;
+  }
+
+  .wiki {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    color: black;
+    font-size: 25px;
+  }
+
+  .logo {
+    width: 30%;
+    height: auto;
+    border: 2px solid darkorchid;
+  }
+
+.column {
+    padding: 10px;
+  }
+
+.op1 {
+    display: flex;
+    justify-content: center;
+}
+
+#coin1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#coin2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#coin3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+  
+.happy {
+    border: solid 4px white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
+      
+}
+
+.center-block {
+  max-width: 100%;
+}
+
+
+  /* Set black background color, white text and some padding */
+footer {
+    background-color: #3B3B3B;
+    color: black;
+    padding: 15px;
+    font-size: 20px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
+    border-top: 4px groove darkorchid;
+    margin-top: 20px;     
+  }
+
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px; 
+    }
+    .row.content {
+      height: auto;
+    } 
+
+.well {
+  margin: 0 auto;
+  width: 40%;  
+}
+  }
+
+/* <-------------------------------------About-----------------------------------> */
+
+.face {
+  border-top: 4px groove purple;
+  border-bottom: 4px groove purple;
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+.richie {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  color: black;
+  font-size: 25px;
+}
+
+#theBestAround {
+  border: 5px groove purple;
+}
+
+/* <-------------------------------------Contact-----------------------------------> */
+
+.container {
+  padding: 20px 120px;
+}
+
+.person {
+  text-align: center;
+  border: 5px solid hotpink;
+  margin-bottom: 15px;
+  width: 70%;
+  height: 70%;
+}
+.person:hover {
+  border: 15px groove hotpink;
+}
+
+.collapse {
+  text-shadow: -1px 0 hotpink, 0 1px hotpink, 1px 0 hotpink, 0 -1px hotpink;  
+  font-size: 15px;
+}
+
+.collapse p {
+  padding-bottom: 2px;
+}
+
+#sam1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  color: black;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+#sam2 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  color: black;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+#sam3 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  color: black;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.foot {
+position: absolute;
+bottom: 0;
+width: 100%;
+}

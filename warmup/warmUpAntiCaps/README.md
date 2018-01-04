@@ -1,0 +1,1 @@
+A function that switches lowercase to Uppercase and vise versa 

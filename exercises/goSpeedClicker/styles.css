@@ -1,0 +1,20 @@
+body {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#count {
+    font-size: 40px;
+}
