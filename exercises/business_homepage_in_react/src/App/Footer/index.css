@@ -1,0 +1,15 @@
+.footer-wrapper {
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.red-container {
+    height: 50%;
+    width: 100%;
+    background-color: orange;
+}

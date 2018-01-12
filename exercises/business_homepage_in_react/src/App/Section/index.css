@@ -1,0 +1,93 @@
+.section-wrapper {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "section section section section"
+        "won too tree for"
+        "five syx s7even ate"
+        "nein tin levin oneplustwo"
+}
+
+.blue-container {
+    grid-area: section;
+    background-color: darkkhaki;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sea1 {
+    grid-area: won;
+    background-color: pink;
+    border-style: solid;∏
+}
+
+.sea2 {
+    grid-area: too;
+    background-color: purple;
+    border-style: solid;
+}
+
+.sea3 {
+    grid-area:  tree;
+    background-color: palegreen;
+    border-style: solid;
+}
+
+.sea4 {
+    grid-area: for;
+    background-color: floralwhite;
+    border-style: solid;
+}
+
+.sea5 {
+    grid-area: five;
+    background-color: brown;
+    border-style: solid;
+}
+
+.sea6 {
+    grid-area: syx;
+    background-color: salmon;
+    border-style: solid;
+}
+
+.sea7 {
+    grid-area: s7even;
+    background-color: olive;
+    border-style: solid;
+}
+
+.sea8 {
+    grid-area: ate;
+    background-color: silver;
+    border-style: solid;
+}
+
+.sea9 {
+    grid-area: nein;
+    background-color: gold;
+    border-style: solid;
+}
+
+.sea10 {
+    grid-area:  tin;
+    background-color: teal;
+    border-style: solid;
+}
+
+.sea11 {
+    grid-area: levin;
+    background-color: indianred;
+    border-style: solid;
+}
+
+.sea12 {
+    grid-area:  oneplustwo;
+    background-color: navajowhite;
+    border-style: solid;
+}
