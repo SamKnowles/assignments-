@@ -1,14 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 
-function SuperHeros(props) {
-    let { name, catchphrase, imgUrl } = props;
-    return (
-        <div>
-           <h1>{name}</h1>
-           <h1>{catchphrase}</h1>
-           <h1>{imgUrl}</h1>
-        </div>
-    )
+
+class SuperHeros extends Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick () {
+        alert(this.props.catchphrase);
+    }
+
+    render() {
+        let { name, catchphrase, imgUrl } = this.props;
+        return (
+            <div onClick={this.handleClick}>
+                <h1>{name}</h1>
+                <h1>{catchphrase}</h1>
+                <img src={imgUrl} />
+            </div>
+        )
+    }
 }
 
 export default SuperHeros;

@@ -1,16 +1,16 @@
 [{
     "name": "Captain Hammer",
     "catchphrase": "I hate the homeless [pause]... ness problem that plagues our city.",
-    "imgUrl": "Capt"
+    "imgUrl": "https://i.pinimg.com/originals/2d/dc/34/2ddc34ed4cd5baeda9fed8635b66933f.jpg"
 },
 {
     "name": "Dalek",
     "catchphrase": "Exterminate!",
-    "imgUrl": "./images/daleks.png"
+    "imgUrl": "http://s5.favim.com/mini/69/hot-bomer-matt-bomer-neal-caffrey-631925.jpg"
 },
 {
     "name": "Superman",
     "catchphrase": "I'M PICKLE RICK!",
-    "imgUrl": "./images/Rick.png"
+    "imgUrl": "https://i.pinimg.com/736x/1f/d1/0b/1fd10bb7275b24fe61bb4d1dd4afb562--neal-caffrey-sexy-actors.jpg"
 }
 ] 
