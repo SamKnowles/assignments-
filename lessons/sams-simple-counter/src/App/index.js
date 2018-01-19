@@ -1,6 +1,6 @@
 import React from 'react';
 import { addOne, minusOne } from '../redux';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 function App(props) {
     return (
@@ -18,4 +18,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {addOne, minusOne})(App);
+export default connect(mapStateToProps, { addOne, minusOne })(App);
