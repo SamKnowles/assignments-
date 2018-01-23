@@ -15,7 +15,19 @@ app.use(bodyParser.json());
 
 // routes
 app.get('/coins', (req, res) => {
-    res.send(coins);
+    let query = req.query;
+    let filteredCoins = coins.filter((coin) => {
+        let found = true;
+        for (let key in query) {
+            var coinString = coin[key].toString();
+            if (coinString !== query[key]) {
+                found = false;
+                break;
+            }
+        }
+        return found;
+    })
+    res.send(filteredCoins);
 });
 
 app.post('/coins', (req, res) => {
@@ -27,7 +39,6 @@ app.post('/coins', (req, res) => {
         data: newCoin
     });
 });
-
 
 
 app.delete('/coins/:id', (req, res) => {
@@ -52,6 +63,8 @@ app.delete('/coins/:id', (req, res) => {
         })
     }
 });
+
+// app.get('/coins/:id/:name/:status', (req, res) => {    
 
 app.get("/coins/:id", (req, res) => {
     let { id } = req.params;
