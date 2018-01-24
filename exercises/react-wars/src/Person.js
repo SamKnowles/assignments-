@@ -28,6 +28,12 @@ class Person extends Component {
         }
     }
     render() {
+        const peopleList = this.state.people.map((person, index) =>
+        <Link
+            to={`/person/${index + 1}`}
+            key={index + person.name}>{person.name}
+        </Link>
+        )
         return (
             <div>
                 <h1>{this.state.person.name}</h1>
