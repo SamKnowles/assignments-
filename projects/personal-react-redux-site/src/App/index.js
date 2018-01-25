@@ -7,7 +7,7 @@ import Jokes from '../Jokes';
 
 function App(props) {
     return (
-        <div>
+        <div className='app-wrapper'>
         <Navbar />
             <Switch>
                 <Route exact path='/' component={Home}></Route>

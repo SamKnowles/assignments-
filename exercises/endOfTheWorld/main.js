@@ -1,4 +1,4 @@
-var upgradeTime = 10;
+var upgradeTime = 1000;
 var seconds = upgradeTime;
 function timer() {
     var days        = Math.floor(seconds/24/60/60);

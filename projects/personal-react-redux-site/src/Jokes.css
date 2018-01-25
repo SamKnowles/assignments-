@@ -1,0 +1,7 @@
+.answer {
+    color: white;
+}
+
+.answer:hover {
+    color: black;
+}

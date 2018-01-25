@@ -1,9 +1,10 @@
 import React from 'react';
 import Jokes from '../../Jokes'
+import './index.css'
 
 function Home(props) {
     return (
-        <div>
+        <div className='home-wrapper'>
             <Jokes></Jokes>
         </div>
     )

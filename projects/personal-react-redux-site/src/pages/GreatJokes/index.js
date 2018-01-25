@@ -1,11 +1,20 @@
 import React from 'react';
+import {addJoke} from '../../Jokes';
 
 function GreatJokes(props) {
     return (
         <div>
-            GreatJokes
+            
         </div>
     )
 }
 
-export default GreatJokes;
+
+function mapStateToProps(state) {
+    return {
+        jokes: state.jokes,
+    }
+}
+
+export default connect(mapStateToProps, { addJoke })(GreatJokes);
+
