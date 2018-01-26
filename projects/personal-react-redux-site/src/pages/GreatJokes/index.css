@@ -1,0 +1,64 @@
+.duck-smile-wrapper {
+    border-top: 2px solid blue;
+    border-bottom: 2px solid Blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.duckSmile {
+    border: 10px double blue;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.joke-list-wrapper {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+#leftMinion {
+    padding-left: 7%;
+    height: 300px;
+    width: auto;
+    max-width: 100%
+}
+
+#rightMinion {
+    padding-right: 7%;
+    height: 300px;
+    width: auto;
+}
+
+ul {
+    margin-top: 10px;
+    list-style-type: none;
+    text-align: center;
+    
+}
+
+ul li:before {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-size: 15px;
+    background-image: url('../../images/drakeMinion.png');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 966px) {
+    #leftMinion {
+        display: none;
+    }
+    #rightMinion {
+        display: none;
+    }
+    .joke-list-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+}

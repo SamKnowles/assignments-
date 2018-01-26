@@ -1,3 +1,34 @@
 .home-wrapper {
-    width: 100
+    background-repeat: no-repeat; 
+    background-image: url('../../images/bigMinion.png');
+    background-position: -400px 0px;
+    display: flex;
+    height: 100vh;
+}
+
+.jokes-wrapper {
+    margin-right: 100px;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.minTwo {
+    border: 5px solid Orange;
+}
+
+@media only screen and (max-width: 1203px) {
+    .home-wrapper {
+        background-color: white;
+        background-image: none;
+        display: flex;
+        justify-content: center;
+    }
+    .jokes-wrapper {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        
+    }
 }

@@ -6,7 +6,7 @@ function Navbar(props) {
     return (
         <div className='nav-wrapper'>
             <Link className='nav-link' to='/'>Home</Link>
-            <Link className='nav-link' to='/greatJokes'>GreatJokes</Link>
+            <Link className='nav-link' to='/greatJokes'>Great Jokes</Link>
         </div>
     )
 }

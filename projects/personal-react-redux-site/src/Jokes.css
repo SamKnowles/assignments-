@@ -1,7 +1,117 @@
 .answer {
     color: white;
+    border: 5px solid gold;
+    margin-top: 10px;
 }
 
 .answer:hover {
     color: black;
+    cursor: help;
 }
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.jokeButton {
+    font-family: 'Varela Round', sans-serif;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #ffee00;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    min-width: 25%;
+}
+
+.jokeButton:hover {
+    background-color: #ffdc00;
+}
+
+.jokeButton:active {
+    background-color: #ffdc00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.saveButton {
+    font-family: 'Varela Round', sans-serif;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #ffee00;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.saveButton:hover {
+    background-color: #ffdc00;
+}
+
+.saveButton:active {
+    background-color: #ffdc00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+h1 {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    float: left;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 60px;
+    width: 25%;
+    height: auto;
+}
+
+.jokeyjoke-wrapper {
+    margin-top: 50px;
+}
+
+.buttNjokes-wrapper {
+    padding-top: 50px;
+    width: 500px;
+}
+
+#pointyMinion {
+    width: 25%;
+    height: auto;
+}
+
+.hoverAnswer-wrapper {
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
