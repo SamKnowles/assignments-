@@ -1,9 +1,13 @@
-const counter =(prevCounter = 0, action) => {
+const counter = (prevCounter = 0, action) => {
     switch (action.type) {
         case "ADD_TIME":
-        return prevCounter + 10;
-        default: 
-        return prevCounter;
+            return prevCounter + 10;
+        case "STOP_TIME"
+            return prevCounter;
+
+
+        default:
+            return prevCounter;
     }
 }
 

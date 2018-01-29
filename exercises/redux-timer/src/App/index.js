@@ -10,10 +10,17 @@ class App extends Component {
       interval: null
     }
     this.startTimer = this.startTimer.bind(this);
+    this.startTimer = this.stopTimer.bind(this);
   }
   startTimer() {
     this.setState({
-      interval: setInterval(this.props.addTime, 10)
+      interval: setInterval(this.props, 10)
+    })
+  }
+
+  stopTimer () {
+    this.setState({
+      interval: 
     })
   }
   displayTime() {
@@ -41,4 +48,4 @@ class App extends Component {
     return { counter: state.counter }
   }
 
-  export default connect(mapStateToProps, { addTime, stopTimer })(App);
+  export default connect(mapStateToProps, { addTime })(App);

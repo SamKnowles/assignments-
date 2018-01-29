@@ -9,7 +9,7 @@ let port = 8080;
 
 app.use(bodyParser.json());
 
-app.get('/bounty', (req, res) =>{
+app.get('/bounty', (req, res) => {
     res.send(bounty);
 });
 
