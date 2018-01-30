@@ -17,4 +17,3 @@ const inputArray = ["this", "is", "an", "array"];
 
 console.log(longest(inputArray));
 
-// 
