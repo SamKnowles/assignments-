@@ -1,13 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const uuid = require('uuid');
+const cors = require('cors');
 
 let bounty = require('./database.js')
 
 const app = express();
-let port = 8080;
+const config = require('./config');
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/bounty', (req, res) => {
     res.send(bounty);
@@ -94,6 +96,6 @@ app.put('/bounty/:id', (req, res) => {
     }
 })
 
-app.listen(port, () => {
-    console.log('listening on ' + port);
+app.listen(config.port, () => {
+    console.log('listening on ' + config.port);
 })
