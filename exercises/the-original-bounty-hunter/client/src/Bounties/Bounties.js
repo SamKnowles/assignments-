@@ -9,9 +9,21 @@ export default class Bounties extends Component {
         super(props);
         this.state = {
             bounties: [],
+            loading: true
         };
         this.formSubmit = this.formSubmit.bind(this);
         this.bountyDelete = this.bountyDelete.bind(this);
+        this.bountyEdit = this.bountyEdit.bind(this);
+    }
+    componentDidMount() {
+        axios.get('http://localhost:8000/bounty')
+            .then((response) => {
+                console.log(response.data);
+                this.setState({
+                    bounties: response.data,
+                    loading: false
+                })
+            })
     }
 
     formSubmit(newBounty) {
@@ -29,36 +41,49 @@ export default class Bounties extends Component {
 
     }
 
-    bountyDelete(id) {
-        let { bounties } = this.props;
-        axios.delete('http://localhost:8000/bounty/' + id)
+    bountyEdit(updatedBounty, id) {
+        let {bounties} = this.state;
+        axios.put('http://localhost:8000/bounty/' + id, updatedBounty)
             .then(response => {
-                for (const i = 0; i <= bounties.length; i++) {
-                    if (bounties[i].id === id) {
-                        this.setState(prevState => {
-                            let { bounties } = prevState;
-                            return {
-                                bounties: [...bounties, response.data],
-                            };
-                        
-            alert(`Bounty ${id} was successfully removed!`);
-                    })
-            .catch((err) => {
-                console.error(err);
+                this.setState({
+                    bounties: bounties.map((bounty) => {
+                        if (bounty._id === id){
+                            return response.data;
+                        }
+                        else {
+                            return bounty;
+                        } 
+                    }),
+                    loading: false
+                })
             })
     }
-}
 
-render() {
-    let { bounties } = this.state;
-    return (
-        <div className='bounties-wrapper'>
-            <Form submit={this.formSubmit}></Form>
+    bountyDelete(id) {
+        let { bounties } = this.state;
+        axios.delete('http://localhost:8000/bounty/' + id)
+            .then(response => {
+                this.setState({
+                    bounties: bounties.filter((bounty, index) => {
+                        return bounty._id !== id
+                    }),
+                    loading: false
+                });
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
 
-            {bounties.map((bounty, index) => {
-                return <Bounty {...bounty} key={index} bountyDelete={this.bountyDelete}></Bounty>;
-            })}
-        </div>
-    )
-}
-}
+    render() {
+        let { bounties } = this.state;
+        return (
+            <div className='bounties-wrapper'>
+                <Form submit={this.formSubmit}></Form>
+                {bounties.map((bounty, index) => {
+                    return <Bounty {...bounty} key={index} bountyDelete={this.bountyDelete} bountyEdit={this.bountyEdit}></Bounty>;
+                })}
+            </div>
+        )
+    }
+}        
