@@ -76,12 +76,12 @@ export default class Form extends Component {
         return (
             <form className='form-wrapper'>
                 <div className='input-wrapper'>
-                    <input onChange={this.handleChange} className='inputs fName' type="text" placeholder='First Name' value={firstName} name='firstName' />
-                    <input onChange={this.handleChange} className='inputs lName' type="text" placeholder='Last Name' value={lastName} name='lastName' />
-                    <input onChange={this.handleChange} className='inputs email' type="text" placeholder='Email' value={email} name='email' />
-                    <input onChange={this.handleChange} className='inputs birthplace' type="text" placeholder='Place of Birth' value={birthPlace} name='birthPlace' />
-                    <input onChange={this.handleChange} className='inputs phone' type="text" placeholder='Phone (numbers only, ex: 8015327746)' value={phone} name='phone' />
-                    <input onChange={this.handleChange} className='inputs favFood' type="text" placeholder='Favorite Food' value={favFood} name='favFood' />
+                    <input onChange={this.handleChange} className='inputsfName' type="text" placeholder='First Name' value={firstName} name='firstName' />
+                    <input onChange={this.handleChange} className='inputslName' type="text" placeholder='Last Name' value={lastName} name='lastName' />
+                    <input onChange={this.handleChange} className='inputsemail' type="text" placeholder='Email' value={email} name='email' />
+                    <input onChange={this.handleChange} className='inputsbirthplace' type="text" placeholder='Place of Birth' value={birthPlace} name='birthPlace' />
+                    <input onChange={this.handleChange} className='inputsphone' type="text" placeholder='Phone (numbers only, ex: 8015327746)' value={phone} name='phone' />
+                    <input onChange={this.handleChange} className='inputsfavFood' type="text" placeholder='Favorite Food' value={favFood} name='favFood' />
                 </div>
                 <textarea onChange={this.handleChange} className='inputs bio' type="text" placeholder='Tell us about yourself' value={bio} name='bio' />
                 <button className='submit' type='submit' disabled={emptyInputs} onClick={this.handleSubmit}>submit</button>

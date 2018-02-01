@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Bounties from './Bounties/Bounties'
 
 export default class App extends Component {
     componentDidMount() {
@@ -11,7 +12,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                hello world
+                <Bounties></Bounties>
             </div>
         )
     }
