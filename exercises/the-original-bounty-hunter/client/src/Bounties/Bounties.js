@@ -79,7 +79,7 @@ export default class Bounties extends Component {
         let { bounties } = this.state;
         return (
             <div className='bounties-wrapper'>
-                <Form submit={this.formSubmit}></Form>
+                <Form add submit={this.formSubmit}></Form>
                 {bounties.map((bounty, index) => {
                     return <Bounty {...bounty} key={index} bountyDelete={this.bountyDelete} bountyEdit={this.bountyEdit}></Bounty>;
                 })}

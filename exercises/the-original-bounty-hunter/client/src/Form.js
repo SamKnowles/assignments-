@@ -38,15 +38,17 @@ export default class Form extends Component {
     }
         
     handleSubmit = (e) => {
-        let { add, id } = this.props
+        let { add, id } = this.props;
         e.preventDefault();
         this.clearInputs();
         if (add) {
             this.props.submit(this.state.inputs)
         }
         else {
-            this.props.submit(this.state.inputs, id)
+            this.props.submit(this.state.inputs, id);
+            this.props.options.toggleDisplay();
         }
+        
     }
 
 
