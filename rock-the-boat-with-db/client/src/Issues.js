@@ -11,9 +11,6 @@ export default class Issues extends Component {
             issues: [],
             loading: true
         };
-        this.formSubmit = this.formSubmit.bind(this);
-        this.issueDelete = this.issueDelete.bind(this);
-        this.issueEdit = this.issueEdit.bind(this);
     }
     componentDidMount() {
         axios.get('/issue/')
@@ -24,7 +21,7 @@ export default class Issues extends Component {
                 })
             })
     }
-    formSubmit(newIssue) {
+    formSubmit = (newIssue) => {
         axios.post('/issue/', newIssue)
             .then((response) => {
                 console.log(response);
@@ -36,7 +33,7 @@ export default class Issues extends Component {
                 })
             });
     }
-    issueDelete(id) {
+    issueDelete = (id) => {
         let { issues } = this.state;
         axios.delete('/issue/' + id)
             .then(response => {
@@ -51,7 +48,7 @@ export default class Issues extends Component {
                 console.error(err);
             });
     }
-    issueEdit(updatedIssue, id) {
+    issueEdit = (updatedIssue, id) => {
         let {issues} = this.state;
         axios.put('/issue/' + id, updatedIssue)
         .then(response => {
@@ -74,7 +71,7 @@ export default class Issues extends Component {
             <div>
                 <Form add submit={this.formSubmit}></Form>
                 {issues.map((issue, index) => {
-                    return <Issue {...issue} key={index} issueDelete={this.issueDelete} issueEdit={this.issueEdit}></Issue>
+                    return <Issue {...issue} key={index} issueDelete={this.issueDelete} issueEdit={this.issueEdit} ></Issue>
                 })}
             </div>
         )

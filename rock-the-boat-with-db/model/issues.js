@@ -12,7 +12,7 @@ const issueSchema = new Schema({
     },
     downVotes: Number,
     upVotes: Number,
-    totalVotes: Number,
+    count: Number,
     comments: String
     }
 )
