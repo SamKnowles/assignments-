@@ -49,30 +49,49 @@ export default class Issues extends Component {
             });
     }
     issueEdit = (updatedIssue, id) => {
-        let {issues} = this.state;
-        axios.put('/issue/' + id, updatedIssue)
-        .then(response => {
-            this.setState({
-                issues: issues.map((issue) => {
-                    if (issue._id === id){
-                        return response.data;
-                    }
-                    else {
-                        return issue;
-                    }
-                }),
-                loading: false
-            })
-        })
-    }
-    render() {
         let { issues } = this.state;
+        axios.put('/issue/' + id, updatedIssue)
+            .then(response => {
+                this.setState({
+                    issues: issues.map((issue) => {
+                        if (issue._id === id) {
+                            return response.data;
+                        }
+                        else {
+                            return issue;
+                        }
+                    }),
+                    loading: false
+                })
+            })
+    }
+
+
+
+    render() {
+
+        let { issues } = this.state;
+
+
         return (
             <div>
                 <Form add submit={this.formSubmit}></Form>
-                {issues.map((issue, index) => {
-                    return <Issue {...issue} key={index} issueDelete={this.issueDelete} issueEdit={this.issueEdit} ></Issue>
-                })}
+                {issues.sort((a, b) => {
+                    console.log(a);
+                    console.log(b);
+                    if (a.count > b.count) {
+                        return -1;
+                    }
+                    else if (a.count < b.count) {
+                        return 1;
+                    }
+                    else {
+                        return 0;
+                    }
+                })
+                    .map((issue, index) => {
+                        return <Issue issue={issue} key={index} issueDelete={this.issueDelete} issueEdit={this.issueEdit} ></Issue>
+                    })}
             </div>
         )
     }

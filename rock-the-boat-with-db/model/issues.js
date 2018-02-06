@@ -10,11 +10,11 @@ const issueSchema = new Schema({
         type: String,
         required: true
     },
-    downVotes: Number,
-    upVotes: Number,
-    count: Number,
+    count: {
+        type: Number,
+        default: 0
+    },
     comments: String
-    }
-)
+});
 
 module.exports = mongoose.model("issue", issueSchema);
