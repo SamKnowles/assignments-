@@ -40,24 +40,13 @@ class Form extends Component {
             tags.splice((tags.indexOf(e.target.value)), 1)
         }
         console.log(tags);
-        // let { name, value, checked } = e.target;
-        // this.setState((prevState) => {
-            
-        //     let newTags = [...prevState.inputs.tags];
-        //     if (checked !== undefined) {
-        //         newTags[Number(name)] = checked
-        //     }
-        //     return {
-        //         inputs: {
-        //             ...prevState.inputs,
-        //             [name]: value,
-        //             tags: newTags
-        //         }
-        //     }
-        // });
     }
 
-    clearInputs = () => {
+    clearInputs = e => {
+        console.dir(e.target.checked)
+        for (let i = 0; i < e.target.checked.length; i++) {
+            e.target.checked[i].checked = false;
+        }
         this.setState({
             inputs: {
                 title: "",
@@ -68,16 +57,16 @@ class Form extends Component {
         });
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
         e.preventDefault();
         var { editGame, addGame, add, index } = this.props;
         if (add) {
             addGame(this.state.inputs);
-            this.clearInputs();
+            this.clearInputs(e);
         } else {
             editGame(this.state.inputs, index);
             this.props.options.toggleDisplay();
-            this.clearInputs();
+            this.clearInputs(e);
         }
     }
 
@@ -91,15 +80,15 @@ class Form extends Component {
                     <input onChange={this.handleChange} value={description} name="description" type="text" placeholder="Description" />
                     <div className="input-group">
                         <label>Option One</label>
-                        <input name='0' type="checkbox" value='Zero' onChange={this.handleChange} />
+                        <input name='checked' type="checkbox" value='Zero' onChange={this.handleChange} />
                     </div>
                     <div className="input-group">
                         <label>Option Two</label>
-                        <input name='1' type="checkbox" value='One' onChange={this.handleChange} />
+                        <input name='checked' type="checkbox" value='One' onChange={this.handleChange} />
                     </div>
                     <div className="input-group">
                         <label>Option Three</label>
-                        <input name='2' type="checkbox" value='Three' onChange={this.handleChange} />
+                        <input name='checked' type="checkbox" value='Three' onChange={this.handleChange} />
                     </div>
                     <button className='submit' type='submit'>Submit</button>
                 </form>
