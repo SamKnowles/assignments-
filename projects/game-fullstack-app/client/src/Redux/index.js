@@ -1,6 +1,5 @@
 import thunk from 'redux-thunk';
-import {createStore, applyMiddleware} from 'redux';
-
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import games from './games';
 
-export default createStore(combineReducers({games}), applyMiddleware(thunk));
+export default createStore(combineReducers({ games }), applyMiddleware(thunk));

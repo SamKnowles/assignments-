@@ -9,7 +9,8 @@ const gameSchema = Schema ({
     description: {
         type: String,
         required: true
-    }
+    }, 
+    tags: [String]
 })
 
 module.exports = mongoose.model("game", gameSchema);

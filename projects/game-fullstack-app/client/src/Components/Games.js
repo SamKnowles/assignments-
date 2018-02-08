@@ -1,20 +1,31 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addGame, loadGames } from '../Redux/games';
+import Game from './Game';
+import Form from './Form';
 
-function Games(props) {
-    let {games} = props;
-    let gameComponents = games.map((game, i) => {
-        return <Game key={i + game.name} {...game} index={i} ></Game>
-    })
-    return (
-        <div>
-            {gameComponents}
-        </div>
-    )
+class Games extends Component {
+ 
+    componentDidMount() {
+        this.props.loadGames();
+    }
+    render() {
+        let { data } = this.props;
+        let gameComponents = data.map((game, i) => {
+            console.log(game)
+            return <Game key={i + game.title} {...game} index={i} ></Game>
+        })
+        return (
+            <div>
+                <Form add submit={this.props.addGame}></Form>
+                {gameComponents}
+            </div>
+        )
+    }
 }
 
 const mapStateToProps = (state) => {
-    return { games: state.games}
+    return state.games
 }
 
-export default connect(mapStateToProps, {})(Games);
+export default connect(mapStateToProps, { addGame, loadGames })(Games);

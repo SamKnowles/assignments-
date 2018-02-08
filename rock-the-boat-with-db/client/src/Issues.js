@@ -39,6 +39,7 @@ export default class Issues extends Component {
             .then(response => {
                 this.setState({
                     issues: issues.filter((issue, index) => {
+                        console.log(issue);
                         return issue._id !== id
                     }),
                     loading: false

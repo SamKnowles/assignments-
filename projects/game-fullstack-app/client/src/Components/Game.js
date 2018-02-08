@@ -1,15 +1,43 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { deleteGame } from '../Redux/games';
+import Form from './Form';
 
+class Game extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            displayForm: false
+        }
+    }
 
-function Game(props) {
-    let {index, title, description} = props;
-    return (
-        <div>
-            <h1>{title}</h1>
-            <h2>{description}</h2>
-        </div>
-    )
+    toggleDisplay = () => {
+        this.setState((prevState) => {
+            return {
+                displayForm: !prevState.displayForm
+            }
+        })
+    }
+    render() {
+        let { _id, title, description, deleteGame } = this.props;
+        let formStyle = { display: this.state.displayForm ? "inherit" : "none" }
+        let dataStyle = {display: this.state.displayForm ? "none" : "inherit"}
+
+        return (
+            <div>
+                <div style={dataStyle}>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                </div>
+                <div style={formStyle}>
+                    <Form edit {...this.props} options={{ toggleDisplay: this.toggleDisplay }}></Form>
+                </div>
+                <button onClick={() => { deleteGame(_id) }}>DELETE</button>
+                <button onClick={this.toggleDisplay}>EDIT</button>
+
+            </div>
+        )
+    }
 }
 
-export default Game
+export default connect(null, { deleteGame })(Game);

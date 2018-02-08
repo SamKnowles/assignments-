@@ -15,12 +15,12 @@ gamesRouter.route('/')
     })
 })
 .get((req,res) => {
-    gameModel.find((err, foundGame) => {
+    gameModel.find((err, foundGames) => {
         if (err) {
             console.error(err);
         }
         else {
-            res.send(foundGame);
+            res.send(foundGames);
         }
     });
 });
