@@ -1,12 +1,11 @@
 import React from 'react';
-import Games from './Games';
-import Nav from './Nav';
+import Home from './Home';
+import '../Styles/App.css';
 
 function App() {
     return (
         <div>
-            <Nav></Nav>
-            <Games></Games>
+            <Home></Home>
         </div>
     )
 }

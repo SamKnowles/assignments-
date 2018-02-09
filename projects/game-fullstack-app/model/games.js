@@ -10,7 +10,7 @@ const gameSchema = Schema ({
         type: String,
         required: true
     }, 
-    tags: [String]
+    tags: [Boolean]
 })
 
 module.exports = mongoose.model("game", gameSchema);

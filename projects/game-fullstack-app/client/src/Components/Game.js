@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { deleteGame } from '../Redux/games';
 import Form from './Form';
+import '../Styles/Game.css';
 
 class Game extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class Game extends Component {
         let dataStyle = {display: this.state.displayForm ? "none" : "inherit"}
 
         return (
-            <div>
+            <div className='game-wrapper'>
                 <div style={dataStyle}>
                     <h3>{title}</h3>
                     <p>{description}</p>
@@ -34,7 +35,6 @@ class Game extends Component {
                 </div>
                 <button onClick={() => { deleteGame(_id) }}>DELETE</button>
                 <button onClick={this.toggleDisplay}>EDIT</button>
-
             </div>
         )
     }

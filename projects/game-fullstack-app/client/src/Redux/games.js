@@ -1,9 +1,10 @@
 import axios from 'axios'
 
-const gamesReducer = (games = { data: [], loading: true }, action) => {
+const gamesReducer = (games = { data: [], loading: true, filter: [true, true, true, true] }, action) => {
     switch (action.type) {
         case "LOAD_GAMES":
             return {
+                ...games,
                 data: action.games,
                 loading: false
             }
@@ -21,16 +22,22 @@ const gamesReducer = (games = { data: [], loading: true }, action) => {
                 }),
             }
         case "EDIT_GAME":
-            let editedGames = [...games];
             return {
                 ...games,
-                data: editedGames.map((game) => {
-                    if (game._id === action.id) {
-                        return Object.assign(games, action.games);
+                data: games.data.map((game) => {
+                    if (game._id === action.game._id) {
+                        return Object.assign(game, action.game);
                     } else {
-                        return games;
+                        return game;
                     }
                 })
+            }
+        case "FILTER_GAMES":
+        let newFilter = [...games.filter]
+        newFilter[Number(action.name)] = action.checked
+            return {
+                ...games,
+                filter: newFilter
             }
         default:
             return games
@@ -40,15 +47,15 @@ const gamesReducer = (games = { data: [], loading: true }, action) => {
 export function loadGames() {
     return dispatch => {
         axios.get('/games/')
-        .then(response => {
-            dispatch({
-                type: "LOAD_GAMES",
-                games: response.data
+            .then(response => {
+                dispatch({
+                    type: "LOAD_GAMES",
+                    games: response.data
+                })
             })
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .catch(err => {
+                console.log(err)
+            })
     }
 }
 
@@ -76,4 +83,13 @@ export function editGame(editgame, id) {
             .catch(err => console.log(err))
     }
 }
+
+export function filterGames(e) {
+    let { name, checked } = e.target;
+    return dispatch => {
+
+        dispatch({ type: "FILTER_GAMES", name, checked })
+    }
+}
+
 export default gamesReducer;
