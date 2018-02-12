@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addGame, editGame, deleteGame } from '../Redux/games';
+import Modal from './Modal'
 import '../Styles/Form.css';
 
 
@@ -14,7 +15,8 @@ class Form extends Component {
                 description: description || "",
                 tags: tags || [false, false, false, false]
             },
-            displayForm: false,
+            modalDisplay: false,
+            displayForm: false
         }
     }
     handleChange = (e) => {
@@ -40,6 +42,12 @@ class Form extends Component {
         })
     }
 
+    toggleModal = () => {
+        this.setState({
+            modalDisplay: !this.state.modalDisplay
+        })
+    }
+
     clearInputs = e => {
         this.setState({
             inputs: {
@@ -49,6 +57,8 @@ class Form extends Component {
             },
         });
     }
+
+
 
     handleSubmit = e => {
         e.preventDefault();
@@ -66,28 +76,42 @@ class Form extends Component {
         let { title, description, tags } = this.state.inputs;
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input onChange={this.handleChange} value={title} name="title" type="text" placeholder="Title" />
-                    <input onChange={this.handleChange} value={description} name="description" type="text" placeholder="Description" />
-                    <div className="input-group">
-                        <label>Option One</label>
-                        <input name="0" type="checkbox" checked={tags[0]} onChange={this.handleChange} />
-                    </div>
-                    <div className="input-group">
-                        <label>Option Two</label>
-                        <input name="1" type="checkbox" checked={tags[1]} onChange={this.handleChange} />
-                    </div>
-                    <div className="input-group">
-                        <label>Option Three</label>
-                        <input name="2" type="checkbox" checked={tags[2]} onChange={this.handleChange} />
-                    </div>
-                    <div className="input-group">
-                        <label>Option Four</label>
-                        <input name="3" type="checkbox" checked={tags[3]} onChange={this.handleChange} />
-                    </div>
-                    <button className='submit-button' type='submit'>Submit</button>
-                    <button className='filter-button' type='submit'></button>
-                </form>
+                <div className="modal-wrapper" >
+                    <button className='puppy' onClick={this.toggleModal}>Add new game</button>
+                </div>
+                <Modal show={this.state.modalDisplay} onClose={this.toggleModal}>
+                    <form className='form-wrapper' onSubmit={this.handleSubmit}>
+                        <div className='input-wrapper'>
+                            <div className='title-wrapper'>
+                                <input onChange={this.handleChange} value={title} name="title" type="text" placeholder="Title" />
+                            </div>
+                            <div className='description-wrapper'>
+                                <textarea className='description-input' onChange={this.handleChange} value={description} name="description" type="text" placeholder="Description" />
+                            </div>
+                        </div>
+                        <div className='game-options-wrapper'>
+                            <div className="indoor-option">
+                                <label>Indoor Games</label>
+                                <input name="0" type="checkbox" checked={tags[0]} onChange={this.handleChange} />
+                            </div>
+                            <div className="outdoor-option">
+                                <label>Outdoor Games</label>
+                                <input name="1" type="checkbox" checked={tags[1]} onChange={this.handleChange} />
+                            </div>
+                            <div className="daytime-option">
+                                <label>Daytime Games</label>
+                                <input name="2" type="checkbox" checked={tags[2]} onChange={this.handleChange} />
+                            </div>
+                            <div className="night-option">
+                                <label>Night Games</label>
+                                <input name="3" type="checkbox" checked={tags[3]} onChange={this.handleChange} />
+                            </div>
+                            <div className='submit-button-wrapper'>
+                                <button className='submit-button' type='submit' onClick={this.props.onClose}>Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </Modal>
             </div>
         )
     }

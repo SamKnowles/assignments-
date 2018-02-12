@@ -1,11 +1,11 @@
 import React from 'react';
 import Games from './Games';
-import Nav from './Nav';
+import '../Styles/Home.css';
 
 function Home() {
     return (
-        <div>
-            <Nav></Nav>
+        <div className='home-wrapper'>
+        <h2>Stop being 'bored' and play a damn game already</h2>
             <Games></Games>
         </div>
     )

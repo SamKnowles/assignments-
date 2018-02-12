@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addGame, loadGames } from '../Redux/games';
 import Game from './Game';
 import FilterForm from './FilterForm';
+import Form from './Form';
 import '../Styles/Games.css';
 
 class Games extends Component {
@@ -18,11 +19,15 @@ class Games extends Component {
             return <Game key={i + game.title} {...game} index={i}></Game>
         })
         return (
-            <div>
-            <Form add submit={this.props.addGame}></Form>
-                {gameComponents}
-                <div className='filtered-games-wrapper'>
-                    <FilterForm></FilterForm>
+            <div className='page-wrapper'>
+                <div className='side-bar-wrapper'>
+                    <div>
+                        <FilterForm></FilterForm>
+                    </div>
+                    <Form add submit={this.props.addGame}></Form>
+                </div>
+                <div className='all-the-games'>
+                    {gameComponents}
                 </div>
             </div>
         )

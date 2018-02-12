@@ -27,14 +27,13 @@ class Game extends Component {
         return (
             <div className='game-wrapper'>
                 <div style={dataStyle}>
-                    <h3>{title}</h3>
+                    <h3 className='title-thing'>{title}</h3>
                     <p>{description}</p>
                 </div>
                 <div style={formStyle}>
                     <Form edit {...this.props} options={{ toggleDisplay: this.toggleDisplay }}></Form>
                 </div>
-                <button onClick={() => { deleteGame(_id) }}>DELETE</button>
-                <button onClick={this.toggleDisplay}>EDIT</button>
+                <button onClick={() => { deleteGame(_id) }}>DELETE</button><button onClick={this.toggleDisplay}>EDIT</button>
             </div>
         )
     }
