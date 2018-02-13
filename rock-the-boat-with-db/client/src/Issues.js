@@ -73,7 +73,6 @@ export default class Issues extends Component {
 
         let { issues } = this.state;
 
-
         return (
             <div>
                 <Form add submit={this.formSubmit}></Form>

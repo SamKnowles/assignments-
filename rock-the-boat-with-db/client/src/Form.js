@@ -13,7 +13,7 @@ export default class Form extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
     }
-    handleChange(e) {
+    handleChange = (e) => {
         let { name, value } = e.target;
         this.setState(prevState => {
             return {
@@ -24,7 +24,7 @@ export default class Form extends Component {
             }
         });
     }
-    clearInputs() {
+    clearInputs = () => {
         this.setState({
             inputs: {
                 title: '',
@@ -59,3 +59,4 @@ export default class Form extends Component {
         )
     }
 }
+

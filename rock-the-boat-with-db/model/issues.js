@@ -14,7 +14,7 @@ const issueSchema = new Schema({
         type: Number,
         default: 0
     },
-    comments: String
+    comment: String
 });
 
 module.exports = mongoose.model("issue", issueSchema);

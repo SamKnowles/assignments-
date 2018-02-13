@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Comments from './Comments';
 import Form from './Form';
 
 
@@ -57,7 +58,7 @@ class Issue extends Component {
                         <div style={{ display: this.state.isEditing ? 'initial' : 'none' }}>
                             <Form submit={issueEdit} id={_id} options={{ toggleDisplay: this.toggleDisplay }}></Form>
                         </div>
-                        <input type="text" className='comment-input' placeholder='Leave a comment' />
+                        <Comments></Comments>
                     </div>
                 </div>
             </div>
