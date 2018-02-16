@@ -56,7 +56,7 @@ class Issue extends Component {
                         <div style={{ display: this.state.isEditing ? 'initial' : 'none' }}>
                             <Form submit={issueEdit} id={_id} options={{ toggleDisplay: this.toggleDisplay }}></Form>
                         </div>
-                        <Comments currentIssue={issue}></Comments>
+                        <Comments issueEdit={issueEdit}currentIssue={issue}></Comments>
                     </div>
                 </div>
             </div>

@@ -8,9 +8,11 @@ export default class Comments extends Component {
         }
     }
     handleChange = (e) => {
-        let {value} = e.target;
-        this.setState = ({
-            comment: value
+        let { value } = e.target;
+        this.setState((prevState) => {
+            return {
+                comment: value
+            }
         });
     }
     clearInput = () => {
@@ -20,21 +22,21 @@ export default class Comments extends Component {
     }
     submitComment = (e) => {
         e.preventDefault();
-        let {currentIssue} = this.props;
-        let {comment} = this.state;
+        let { currentIssue } = this.props;
+        let { comment } = this.state;
         currentIssue.comments.push(comment);
-        this.props.issuseEdit(currentIssue);
+        this.props.issueEdit(currentIssue, currentIssue._id);
         this.clearInput();
     }
     deleteComment = (comment) => {
-        let {currentIssue} = this.props;
-        for(let i = 0; i < currentIssue.comments.length; i++) {
+        let { currentIssue } = this.props;
+        for (let i = 0; i < currentIssue.comments.length; i++) {
             if (currentIssue.comments[i] === comment) {
                 currentIssue.comments.splice(i, 1);
                 break;
             }
         }
-        this.props.issuseEdit(currentIssue);
+        this.props.issueEdit(currentIssue, currentIssue._id);
     }
     render() {
         return (
@@ -44,13 +46,13 @@ export default class Comments extends Component {
                         return (
                             <div className='single-comment' key={index}>
                                 <div className='comment-text'>{comment}</div>
-                                <button className='delete-comment' onclick={() => {this.deleteComment(comment)}}>X</button>
+                                <button className='delete-comment' onClick={() => { this.deleteComment(comment) }}>X</button>
                             </div>
                         );
                     })}
                 </div>
                 <form className='comment-form' onSubmit={this.submitComment}>
-                    <textarea className='coment-box' onChange={this.handleChange} type='text' value={this.state.comment} placeholder='Please leave a comment' ></textarea>
+                    <textarea className='comment-box' onChange={this.handleChange} value={this.state.comment} name="comment" placeholder='Please leave a comment' ></textarea>
                     <button className='post-comment'>POST</button>
                 </form>
             </div>

@@ -72,7 +72,7 @@ export default class Issues extends Component {
     render() {
 
         let { issues } = this.state;
-
+        console.log(issues);
         return (
             <div>
                 <Form add submit={this.formSubmit}></Form>

@@ -11,7 +11,6 @@ export default class Form extends Component {
                 description: ''
             }
         }
-        this.handleChange = this.handleChange.bind(this);
     }
     handleChange = (e) => {
         let { name, value } = e.target;
