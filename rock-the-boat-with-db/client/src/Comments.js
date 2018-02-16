@@ -24,7 +24,7 @@ export default class Comments extends Component {
         let {comment} = this.state;
         currentIssue.comments.push(comment);
         this.props.issuseEdit(currentIssue);
-        this.clearInput;
+        this.clearInput();
     }
     deleteComment = (comment) => {
         let {currentIssue} = this.props;
@@ -37,8 +37,6 @@ export default class Comments extends Component {
         this.props.issuseEdit(currentIssue);
     }
     render() {
-        let {comment} = this.state;
-        let {issueEdit} = this.props;
         return (
             <div>
                 <div>

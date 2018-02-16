@@ -20,7 +20,6 @@ class Issue extends Component {
         })
     }
     addOne = (issue, id) => {
-        // issue.count = issue.count + 1
         this.props.issueEdit(issue, id)
         this.setState((prevState) => {
             return {
@@ -31,7 +30,6 @@ class Issue extends Component {
 
     }
     minusOne = (issue, id) => {
-        // issue.count = issue.count -1
         this.props.issueEdit(issue, id)
         this.setState((prevState) => {
             return {
@@ -41,8 +39,8 @@ class Issue extends Component {
     }
 
     render() {
-        let { issueDelete, issueEdit } = this.props;
-        let { title, _id, description, count } = this.props.issue;
+        let { issueDelete, issueEdit, issue } = this.props;
+        let { title, _id, description, count } = issue;
         return (
             <div>
                 <div>
@@ -58,7 +56,7 @@ class Issue extends Component {
                         <div style={{ display: this.state.isEditing ? 'initial' : 'none' }}>
                             <Form submit={issueEdit} id={_id} options={{ toggleDisplay: this.toggleDisplay }}></Form>
                         </div>
-                        <Comments></Comments>
+                        <Comments currentIssue={issue}></Comments>
                     </div>
                 </div>
             </div>
