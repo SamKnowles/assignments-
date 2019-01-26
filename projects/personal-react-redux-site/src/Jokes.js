@@ -14,7 +14,6 @@ class Jokes extends Component {
             showing: false,
             disabled: true
         }
-
         // this.handleClick = this.handleClick.bind(this);
         // this.questionJoke = this.questionJoke.bind(this);
         // this.clickyclick = this.clickyclick.bind(this);
@@ -59,8 +58,6 @@ class Jokes extends Component {
             disabled: true
         });
     }
-
-
 
     questionJoke = (str) => {
         let index = str.indexOf('?');

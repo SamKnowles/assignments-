@@ -6,7 +6,7 @@ box.onmouseover = function(){
 box.onmousedown = function(){
     box.style.backgroundColor = "red";
 };
-
+  
 box.onmouseup = function(){
     box.style.backgroundColor = "yellow";
 };

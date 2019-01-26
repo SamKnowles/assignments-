@@ -6,7 +6,7 @@ import mintwo from '../../images/twoMinions.jpg'
 function Home(props) {
     return (
         <div className='home-wrapper'>
-            <div class='jokes-wrapper'>
+            <div className='jokes-wrapper'>
                 <Jokes></Jokes>
             </div>
         </div>

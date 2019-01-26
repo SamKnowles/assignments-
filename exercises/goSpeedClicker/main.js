@@ -8,8 +8,7 @@ let counter = JSON.parse(localStorage.getItem("count")) || 0;
 
 function displayCount(event) {
     localStorage.setItem("count", JSON.stringify(counter));    
-    count.innerHTML = counter;
-    counter++;    
+    count.innerHTML = counter++;  
 }
 
 

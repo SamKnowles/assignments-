@@ -41,6 +41,7 @@ let expected = [
     lastName: "Palin",
     age: 47
     },
+    {
     firstName: "Rick",
     lastName: "Sanchez",
     age: 78

@@ -49,7 +49,7 @@ class App extends Component {
                 <button name="subtract" onClick={this.handleClick}>Subtract!</button>
                 <p>{counter}</p>
                 <button onClick={this.reset}>Reset</button> */}
-                <div style={boxStyle} className="box" onMouseOver={this.changeColor} onMouseOut={this.changeColor}>
+                <div style={boxStyle} className="box" onClick={this.changeColor} onMouseOut={this.changeColor}>
                 </div>
             </div>
         )
