@@ -1,77 +1,67 @@
-// var pullOutDrawer = function(drawer, index) {
-//     return this[drawer][index];
-// }
+/* "It's like a function but for strings!" - Dan Hitt
+Let's Practice String Methods.
+Implement all of the listed String Methods below using at least 3 unique Functions.
+String Methods
+-.concat()
+.indexOf()
+-.lastIndexOf()
+-.match()
+-.replace()
+-.slice()
+-.split()
+-.toLowerCase()
+-.toUpperCase()
+-.substr()
+*/ 
 
-// var dresser = {
-//     topDrawer: ["guns", "poison", "knives", "sword", "more guns" ,"even more guns" ,"kitten"],
-//     midDrawer: ["dead dogs", "dead wolf", "dead eagle", "dead leaves", "dead monkey"],
-//     bottomDrawer: ["pants", "shorts", "socks", "hats", "wigs"],
-//     dresserAction: pullOutDrawer
-// }
-
-// var kidsBedroomDresser = {
-//     topDrawer: ["book", "cards", "legos"],
-//     topDrawer: ["shoes", "mud", "paper", "dolls"],
-//     midDrawer: ["toys", "kindles", "rocks"],
-//     dresserAction: pullOutDrawer
-// }
-
-// console.log(kidsBedroomDresser.dresserAction("topDrawer, 1"))
-
-// var concat = function(str1, str)
-
-
-// var concat = function(str1, str2) {
-//     return str1.concat(str2);
-// }
-
-// console.log(concat("bill", "fleur"));
-
-// var indexOf = function() {
-//     var str = "typewriter";
-//     return str.indexOf('e');
-// }
-
-// console.log(indexOf());
-
-// var match = function(str1) {
-//     return str1.match(/s/g);
-// }
-
-// console.log(match("This is the thing thing yup yes yepper"));
-
-// var replace = function(str1) {
-//     return str1.replace("bill", "Billy");
-// }
-
-// console.log(replace("bill is the king!"));
-
-// var slice = function(str1) {
-//     return str1.slice(8);
-// }
-
-// console.log(slice("Rumplebumple"));
-
-// var split = function(str1) {
-//     return str1.split('');
-// }
-
-// console.log(split("This is Frank.  Where's my toe knife?"));
-
-// var toLowerCase = function(str1) {
-//     return str1.toLowerCase();
-// }
-
-// console.log(toLowerCase("HERE IT COMES. GET READY"));
-
-// var toUpperCase = function(str1) {
-//     return str1.toUpperCase();
-// }
-
-// console.log(toUpperCase("i want to be yelling.  holy shit. i am yelling"));
-
-var substr = function(str1) {
-    return str1.substr(2, 5);
+function combineStrings(str1, str2) {
+    return str1.concat(str2);
 }
 
-console.log(substr("I wish I were in the land o"));
+console.log(combineStrings("happy", "day"));
+
+function fixName(str){
+    var lowerCaseStr = str.toLowerCase();
+    var arr = lowerCaseStr.split('');
+    var firstLetter = arr[0].toUpperCase();
+    var remainingLetters = arr.slice(1).join('');
+    return firstLetter.concat(remainingLetters);
+}
+
+console.log(fixName("sAllY"));
+
+function findLastInstance(str, character) {
+    return str.lastIndexOf(character);
+}
+
+console.log(findLastInstance("Happy day", "a"));
+
+function sliceStr(str, start, stop) {
+    return str.slice(start, stop);
+}
+
+console.log(sliceStr("Hello world", 5, 11));
+
+function prank(str, wordToReplace, gagWord) {
+    return str.replace(wordToReplace, gagWord);
+}
+
+console.log(prank("I love dogs", "I", "Goose"));
+
+function getItem(str, start, end) {
+    return str.substring(start, end);
+}
+
+console.log(getItem("socksshoescoat", 5, 10));
+
+function match(str, regex) {
+    return str.match(regex);
+}
+
+console.log(match("Ben", /Ben/));
+
+function findLocation(str, char) {
+    return str.indexOf(char);
+}
+
+console.log(findLocation("Hello world", "world"));
