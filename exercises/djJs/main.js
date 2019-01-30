@@ -1,39 +1,46 @@
-var box = document.getElementById("box");
-box.onmouseover = function(){
-    box.style.backgroundColor = "blue";
-};
+// The square's color will change as follows:
 
-box.onmousedown = function(){
-    box.style.backgroundColor = "red";
-};
-  
-box.onmouseup = function(){
-    box.style.backgroundColor = "yellow";
-};
+// Blue when the mouse hovers over the square
+// Red when the mouse button is held down over the square
+// Yellow when the mouse button is let go over the square
+// Green when the mouse is double clicked in the square
+// Orange when the mouse scroll is used somewhere in the window (not just over the square).
+// You should also be able to press the first letter of the above colors and have the box change to that color. 
 
-box.ondblclick = function(){
-    box.style.backgroundColor = "green";
-};
+var square = document.getElementById('square');
 
-window.onscroll = function(){
-    box.style.backgroundColor = "orange";
-};
+square.onmouseenter = function(){
+    square.style.backgroundColor = 'blue';
+}
 
-window.onkeypress = function(e) {
-    if (e.keyCode === 98) {
-        box.style.backgroundColor = "blue";
-    }
-    else if (e.keyCode === 103) {
-        box.style.backgroundColor = "green";
-    }
-    else if (e.keyCode === 114) {
-        box.style.backgroundColor = "red";
-    }
-    else if (e.keyCode === 121) {
-        box.style.backgroundColor = "yellow";
-    }
-    else if (e.keyCode === 111) {
-        box.style.backgroundColor = "orange";
-    }
-};
+square.onmousedown = function() {
+    square.style.backgroundColor = 'red';
+}
 
+square.onmouseup = function() {
+    square.style.backgroundColor = 'yellow';
+}
+
+square.oncontextmenu = function() {
+    square.style.backgroundColor = 'green';
+}
+
+window.onwheel = function() {
+    square.style.backgroundColor = 'orange';
+}
+
+window.onkeypress = function(event) {
+    console.log(event);
+    if(event.keyCode === 121) {
+        square.style.backgroundColor = 'yellow';
+    } else if (event.keyCode === 114) {
+        square.style.backgroundColor = 'red';
+    } else if (event.keyCode === 98) {
+        square.style.backgroundColor = 'blue';
+    } else if (event.keyCode === 103) {
+        square.style.backgroundColor = 'green';
+    } else if (event.keyCode === 111) {
+        square.style.backgroundColor = 'orange';
+        
+    }
+}
