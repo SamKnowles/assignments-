@@ -1,7 +1,29 @@
-#container {
+/* #container {
     background-color: pink;
         margin: auto;
         width: 50%;
         border: 3px solid green;
         padding: 10px;
+} */
+
+body {
+    font-family: Arial;
+}
+
+form {
+    width: 300px;
+    padding: 0px 10px 10px 10px;
+    border: 5px solid gray;
+}
+
+.own-line {
+    display: block;
+}
+
+.submit-div {
+    text-align: center;
+}
+.submit-button {
+    margin-top: 10px;
+    font-size: 50px;
 }
