@@ -1,0 +1,94 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-image: url(/images/pexels-photo-139306.jpeg);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+.header {
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Bonfire';
+    src: url('/fonts/bonfire.otf');
+}
+
+@font-face {
+    font-family: 'Playlist';
+    src: url('/fonts/playlist-script.otf');
+}
+
+.business-name {
+    font-family: 'Bonfire';
+    font-size: 8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.and {
+    font-family: 'Playlist';
+}
+
+@media (max-width: 1100px) {
+    .business-name {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 800px) {
+    .business-name {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 550px) {
+    .business-name {
+        font-size: 2.5em;
+    }
+}
+
+.navbar {
+    height: 7vh;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu {
+    float: right;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        text-align: center;
+    }
+    .navbar a {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        width: 100%;
+    }
+}
