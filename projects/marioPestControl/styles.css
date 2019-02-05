@@ -1,12 +1,14 @@
 
 
 #page-title {
+    border: 2px solid purple;    
     font-family: 'Bangers', cursive;
     text-align: center;
     font-size: 100px;
 }
 
 ul {
+    border: 2px solid black;
     text-align: center;
     margin: 0 auto;
     list-style: none;
@@ -15,6 +17,7 @@ ul {
 }
 
 #list > li {
+    border: 2px solid red;    
     display: inline-block;
     margin: 35px;
     text-align: center;
@@ -25,11 +28,13 @@ input {
 }
 
 h2 {
+    border: 2px solid green;        
     font-style: normal;
     font-size: 18px;
 }
 
 p {
+    border: 2px solid purple;        
     font-family: sans-serif;
     text-align: center;
     font-size: 30px;
