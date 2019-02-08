@@ -144,7 +144,7 @@ footer {
   height: 70%;
 }
 .person:hover {
-  border: 15px groove hotpink;
+  border: 1 groove Black;
 }
 
 .collapse {
