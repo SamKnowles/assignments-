@@ -144,7 +144,7 @@ footer {
   height: 70%;
 }
 .person:hover {
-  border: 1 groove Black;
+  border: 15px groove black;
 }
 
 .collapse {
