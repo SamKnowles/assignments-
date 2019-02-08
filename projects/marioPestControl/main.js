@@ -74,7 +74,7 @@ window.oninput = function () {
     document.getElementById("totally").innerHTML = done;
 }
 
-INDIVIDUAL PRICE
-find out how many have been caught
-multiply how many have been caught by its price
-display price in span
+// INDIVIDUAL PRICE
+// find out how many have been caught
+// multiply how many have been caught by its price
+// display price in span

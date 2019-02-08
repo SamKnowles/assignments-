@@ -1,40 +1,40 @@
-// const rs = require("readline-sync");
+const rs = require("readline-sync");
 
-// console.log("Youre in a room. There is a girl, some hidden cash, and the slim possibility of becoming un-single.");
+console.log("Youre in a room. There is a girl, some hidden cash, and the slim possibility of becoming un-single.");
 
-// let inv = [];
-// let temporarilySingle = true;
+let inv = [];
+let temporarilySingle = true;
 
-// while (temporarilySingle) {
-//     let userinput = rs.question("My name is Mercedes.  What's up? ");
-//     userinput = userinput.toLowerCase();
+while (temporarilySingle) {
+    let userinput = rs.question("My name is Mercedes.  What's up? ");
+    userinput = userinput.toLowerCase();
 
-//     if (userinput.includes("yo") && userinput.includes("gurl")) {
-//         console.log("... Hard pass.");
-//         temporarilySingle = false;
-//         console.log("Theres no hope for you, pleb. Youre permanently single.");
-//     }
-//     else if (userinput.includes("im rich") && userinput.includes("youre beautiful")) {
-//         if (inv.includes("cash money")) {
-//             console.log("Okaaay boo. I like where this is going!");
-//             break;
-//         }
-//         else {
-//             console.log("Gross. No... Just... no.");
-//         }
-//     }
-//     else if (userinput.includes("take") && userinput.includes("cash money")) {
-//         console.log("Great find playa!");
-//         inv.push("cash money");
-//         console.log(inv);
-//     }
-//     else if (userinput.includes("look")) {
-//         console.log("Youre in a room. There is a girl, some hidden cash, and the slim possibility of becoming un-single.");
-//     }
-//     else {
-//         console.log("Wrong words fool!");
-//     }
-// }
+    if (userinput.includes("yo") && userinput.includes("gurl")) {
+        console.log("... Hard pass.");
+        temporarilySingle = false;
+        console.log("Theres no hope for you, pleb. Youre permanently single.");
+    }
+    else if (userinput.includes("im rich") && userinput.includes("youre beautiful")) {
+        if (inv.includes("cash money")) {
+            console.log("Okaaay boo. I like where this is going!");
+            break;
+        }
+        else {
+            console.log("Gross. No... Just... no.");
+        }
+    }
+    else if (userinput.includes("take") && userinput.includes("cash money")) {
+        console.log("Great find playa!");
+        inv.push("cash money");
+        console.log(inv);
+    }
+    else if (userinput.includes("look")) {
+        console.log("Youre in a room. There is a girl, some hidden cash, and the slim possibility of becoming un-single.");
+    }
+    else {
+        console.log("Wrong words fool!");
+    }
+}
 
 const rs = require("readline-sync");
 
