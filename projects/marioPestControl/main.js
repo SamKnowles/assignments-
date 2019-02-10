@@ -44,6 +44,7 @@
 var goombaPrice = 5;
 var bobombPrice = 7;
 var cheepCheepPrice = 11;
+
 var gom = document.getElementById("gom");
 var bob = document.getElementById("bob");
 var cheep = document.getElementById("cheep");
