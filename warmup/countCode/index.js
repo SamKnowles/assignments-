@@ -1,23 +1,23 @@
-// function countCode(str) {
-//     str = str.toLowerCase();
-//     let count = 0;
-//     for(let i = 0; i < str.length; i++) {
-//         if(str[i] === 'c') {
-//             if(/(co([a-z])e)/.test(str.slice(i, i+4))) {
-//                 count++;
-//                 i += 3;
-//             }
-//         }
-//     }
-//     return count;
-//  }
+function countCode(str) {
+    str = str.toLowerCase();
+    let count = 0;
+    for(let i = 0; i < str.length; i++) {
+        if(str[i] === 'c') {
+            if(/(co([a-z])e)/.test(str.slice(i, i+4))) {
+                count++;
+                i += 3;
+            }
+        }
+    }
+    return count;
+ }
 
 //  function countCode(str) {
 //     var count = (str.match(/co.*?e/g)).length;
 //     console.log(count);
 //  }
 
-//  console.log(countCode('codebillscotecogebilseasadsgcoze'));
+ console.log(countCode('codebillscotecogebilseasadsgcoze'));
 
 // function add(x, y) {
 //     if(typeof x != "number" || typeof y != "number"){
@@ -62,12 +62,12 @@
 
 // <-------------------------------UNIT TESTING---------------------------->
 
-function multiply(x, y) {
-    if (typeof x !== "number" || typeof y !== "number"){
-        throw "invalid input";
-    }
-    return x * y;
+// function multiply(x, y) {
+//     if (typeof x !== "number" || typeof y !== "number"){
+//         throw "invalid input";
+//     }
+//     return x * y;
     
-}
+// }
 
-module.exports = multiply;
+// module.exports = multiply;
