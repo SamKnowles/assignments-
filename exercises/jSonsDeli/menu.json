@@ -1,90 +1,155 @@
 {
-    "appetizers": [
+    "appetizers": [ 
         {
-            "name": "The Sam",
-            "ingredients": ["Face", "Hands", "Bones", "Ears"],
-            "description": "A brown meal.  Carnivores love it"
-        },
-        {
-            "name": "The Tim",
-            "ingredients": ["Happiness", "Joy", "Amazingness"],
-            "description": "The best.  Simply the Best"
-        }
-    ],
-
-
-
+            "name": "onion rings", 
+            "indredients": ["onions", "bread crumbs (CONTAINS: WHEAT)", "oil"],
+            "description": "Hot outta the pot!"    
+        },{
+            "name": "pickles",
+            "ingredients": ["cucumbers", "vinegar"],
+            "description": "Sour with a crunch"
+        } 
+    ], 
+    
     "cold sandwiches": [
         {
-            "name": "The Pat",
-            "ingredients": ["Coolness", "Happiness", "jokes for days"],
-            "description": "Stud.  Coolest Pat in the world.  Of all the sexes"
-        },
-        {
-            "name": "The Lesa",
-            "ingredients": ["Grit", "Coolness", "Jewishness"],
-            "description": "Head Strong!"
+            "name": "bologna",
+            "ingredients": ["wonder bread", "bologna", "american cheese", "mayo"],
+            "description": "One bite takes you back to your redneck roots"
+        }, {
+            "name": "italian",
+            "ingredients": ["hoagie bun", "dijon mustard", "garlic aioli", "salami", "other italian meats", "lettuce", "provolone cheese"],
+            "description": "Great sandwich"
         }
     ],
-
-
-
+    
     "hot sandwiches": [
         {
-            "name": "The Amy",
-            "ingredients": ["Happiness", "Kindness", "A hint of racism"],
-            "description": "The coolest"
+            "name": "fajita bambita",
+            "ingredients": ["steak", "bell peppers", "onions", "fajita seasonsings", "flatbread"],
+            "description": "This is a really boring sandwich"
         },
-        {
-            "name": "The Luke",
-            "ingredients": ["Coolness", "Brains", "A lotta heart"],
-            "description": "Wow is all you need to know"
+        { 
+            "name":"hot mama", 
+            "ingredients": ["meatballs", "hoagies"],
+            "description": "Standard meatball sandwich"
         }
     ],
-
-
 
     "desserts": [
         {
-            "name": "The Celeste",
-            "ingredients": ["Trumpet skills", "Coolest", "Coolest"],
-            "description": "Best Celeste Ever"
-        },
-        {
-            "name": "The Ben",
-            "ingredients": ["Red cap", "Teaching ability for days", "Marketable skills"],
-            "description": "Best damn Ben you'll ever encounter"
+            "name": "chocolate cream pie",
+            "ingredients": ["chocolate", "cream", "pie"],
+            "description": "Chocolatey. Creamy. Pie-y." 
+        }, {
+            "name": "oreo milkshake",
+            "ingredients": ["oreos", "milk", "shake"],
+            "description": "We put some milk and some oreos in a cup and shook them."
         }
     ],
-
-
-
-    "desserts2": [
-        {
-            "name": "The Marcus",
-            "ingredients": ["Angels", "Beauty", "A little bit of Heaven"],
-            "description": "Yum"
-        },
-        {
-            "name": "The Eric",
-            "ingredients": ["Cool shirt", "Great skills", "Even Greater Skills"],
-            "description": "Holy Shit this guy is great"
-        }
-    ],
-
-
 
     "drinks": [
         {
-            "name": "The Colton",
-            "ingredients": ["Humor", "Honor", "sarcasm"],
-            "description": "Watch out now!  This guy gets it"
-        },
-        {
-            "name": "The Brian",
-            "ingredients": ["Piss", "Vinigar"],
-            "description": "Very happy it's amazing"
+            "name": "coke", 
+            "ingredients": ["water", "carbonation", "flavor"],
+            "description": "Everyone's favorite. Unless you like Pepsi better."
+        },{
+            "name": "pepsi", 
+            "ingredients": ["water", "carbonation", "flavor"],
+            "description": "Cola. Unless you're a Coke snob then this is not cola."
         }
-    ]
-
+    ]        
 }
+
+
+
+// {
+//     "appetizers": [
+//         {
+//             "name": "The Sam",
+//             "ingredients": ["Face", "Hands", "Bones", "Ears"],
+//             "description": "A brown meal.  Carnivores love it"
+//         },
+//         {
+//             "name": "The Tim",
+//             "ingredients": ["Happiness", "Joy", "Amazingness"],
+//             "description": "The best.  Simply the Best"
+//         }
+//     ],
+
+
+
+//     "cold sandwiches": [
+//         {
+//             "name": "The Pat",
+//             "ingredients": ["Coolness", "Happiness", "jokes for days"],
+//             "description": "Stud.  Coolest Pat in the world.  Of all the sexes"
+//         },
+//         {
+//             "name": "The Lesa",
+//             "ingredients": ["Grit", "Coolness", "Jewishness"],
+//             "description": "Head Strong!"
+//         }
+//     ],
+
+
+
+//     "hot sandwiches": [
+//         {
+//             "name": "The Amy",
+//             "ingredients": ["Happiness", "Kindness", "A hint of racism"],
+//             "description": "The coolest"
+//         },
+//         {
+//             "name": "The Luke",
+//             "ingredients": ["Coolness", "Brains", "A lotta heart"],
+//             "description": "Wow is all you need to know"
+//         }
+//     ],
+
+
+
+//     "desserts": [
+//         {
+//             "name": "The Celeste",
+//             "ingredients": ["Trumpet skills", "Coolest", "Coolest"],
+//             "description": "Best Celeste Ever"
+//         },
+//         {
+//             "name": "The Ben",
+//             "ingredients": ["Red cap", "Teaching ability for days", "Marketable skills"],
+//             "description": "Best damn Ben you'll ever encounter"
+//         }
+//     ],
+
+
+
+//     "desserts2": [
+//         {
+//             "name": "The Marcus",
+//             "ingredients": ["Angels", "Beauty", "A little bit of Heaven"],
+//             "description": "Yum"
+//         },
+//         {
+//             "name": "The Eric",
+//             "ingredients": ["Cool shirt", "Great skills", "Even Greater Skills"],
+//             "description": "Holy Shit this guy is great"
+//         }
+//     ],
+
+
+
+//     "drinks": [
+//         {
+//             "name": "The Colton",
+//             "ingredients": ["Humor", "Honor", "sarcasm"],
+//             "description": "Watch out now!  This guy gets it"
+//         },
+//         {
+//             "name": "The Brian",
+//             "ingredients": ["Piss", "Vinigar"],
+//             "description": "Very happy it's amazing"
+//         }
+//     ]
+
+// }
