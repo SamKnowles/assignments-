@@ -1,0 +1,37 @@
+.container {
+    background-color: pink;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+ border: 2px solid Black;
+ height: 12%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.link {
+    border: 2px solid Purple;
+    width: 20%;
+    height: 90%;
+}
+
+.header {
+    border: 2px solid Black;
+    height: 20%;
+}
+
+.body {
+    border: 2px solid Black;
+    height: 30%;
+}
+
+.footer {
+    border: 2px solid Black;
+    height: 12%;    
+}
