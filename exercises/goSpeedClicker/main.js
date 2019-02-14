@@ -1,9 +1,9 @@
-// let button = document.getElementById('click-me');
-// let display = document.getElementById('display');
-// let reset = document.getElementById('reset');
-// let countdownDisplay = document.getElementById('countdown');
+let button = document.getElementById('click-me');
+let display = document.getElementById('display');
+let reset = document.getElementById('reset');
+let countdownDisplay = document.getElementById('countdown');
 
-// let counter = Number(localStorage.getItem('counter')) || 0;
+let counter = Number(localStorage.getItem('counter')) || 0;
 
 window.onload = function() {
     display.innerHTML = counter;
