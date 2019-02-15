@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const inventoryRoutes = require('./routes/inventory');
 const bodyParser = require('body-parser');
 
-//no more body-parser ya dummy.  Look up app.use(express.json) 
+//no more body-parser ya silly.  Look up app.use(express.json) 
 
 mongoose.connect('mongodb://localhost:27017/crud-store', (err) => {
     if (err) throw err;

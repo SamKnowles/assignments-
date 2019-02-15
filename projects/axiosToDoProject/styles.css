@@ -10,6 +10,6 @@ body {
     background-size: cover;
 }
 
-input[type="checkbox" i] {
+input [type="checkbox"] {
     color:red;
 }
