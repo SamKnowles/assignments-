@@ -10,6 +10,7 @@ export default class Input extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.clicky = this.clicky.bind(this);
         this.clearInputs = this.clearInputs.bind(this);
+        this.reset = this.reset.bind(this);        
     }
     handleChange(e) {
         this.setState({ name: e.target.value })
@@ -31,18 +32,23 @@ export default class Input extends Component {
         this.setState({ name: "" });
     }
 
+    reset() {
+        this.setState({list: [], name: ''});
+    }
+
     render() {
         let { name, list } = this.state;
         return (
             <form onSubmit={this.clicky}>
                 <input onChange={this.handleChange} type="text" value={name} />
                 <h1>{name}</h1>
-                <button>Click ME</button>
+                <button>Add name</button>
                 <ol>
                     {list.map((name, index) => {
-                        return <li key={index}>{name}</li>
+                        return <li key={index} >{name}</li>
                     })}
                 </ol>
+                <button onClick={this.reset}>Clear list</button>
             </form>
         )
     }
