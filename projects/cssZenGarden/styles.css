@@ -5,7 +5,6 @@ body {
 }
 
 .container {
-
     margin: 0 auto;  
     display: grid;
     height: 350px;
