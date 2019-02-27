@@ -30,7 +30,6 @@ export default class Badgelist extends Component {
             <div className='badgelist-wrapper'>
                 <Form submit={this.formSubmit}></Form>
                 {badges.map((badge, index) => {
-                    
                     return <Badge backgroundColor={backgroundColor} {...badge} key={index} ></Badge>;
                 })}
             </div>

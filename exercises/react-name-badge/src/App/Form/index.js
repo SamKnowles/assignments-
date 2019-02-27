@@ -17,11 +17,9 @@ export default class Form extends Component {
             submit: props.submit,
             emptyInputs: true
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e) {
+    handleChange = (e) =>{
         let { name, value } = e.target;
         let { firstName, lastName, email, birthPlace, phone, favFood, bio } = this.state.inputs;
         this.setState(prevState => {
@@ -58,7 +56,7 @@ export default class Form extends Component {
         });
     }
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
         e.preventDefault();
         let { phone } = this.state.inputs;
         if (!(/^\d+$/g.test(phone)) || phone.length !== 10) {

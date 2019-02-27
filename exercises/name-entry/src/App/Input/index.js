@@ -7,16 +7,13 @@ export default class Input extends Component {
             name: '',
             list: []
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.clicky = this.clicky.bind(this);
-        this.clearInputs = this.clearInputs.bind(this);
-        this.reset = this.reset.bind(this);        
+       
     }
-    handleChange(e) {
+    handleChange = (e) => {
         this.setState({ name: e.target.value })
     }
 
-    clicky(e) {
+    clicky = (e) => {
         e.preventDefault();
         let { name } = this.state;
         this.setState((prevState) => {
@@ -28,11 +25,11 @@ export default class Input extends Component {
         this.clearInputs();
     }
 
-    clearInputs() {
+    clearInputs = () => {
         this.setState({ name: "" });
     }
 
-    reset() {
+    reset = () => {
         this.setState({list: [], name: ''});
     }
 

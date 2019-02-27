@@ -42,7 +42,14 @@ class App extends Component {
         let {names, inputName} = this.state;
         return (
             <form className='app-wrapper'>
-                <input className='name-input' type="text" onChange={this.handleChange} value={inputName} name='inputName' placeholder='Full Name'/>
+                <input 
+                className='name-input' 
+                type="text" 
+                onChange={this.handleChange} 
+                value={inputName} 
+                name='inputName' 
+                placeholder='Full Name'
+                />
                 <h1>{inputName}</h1>
                 <button className='addName' type='submit' onClick={this.handleSubmit} onKeyPress={this.handleKeyPress}>add name</button>
                 <ol className="nameList">
